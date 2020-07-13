@@ -1,0 +1,48 @@
+{
+  "name": "eslint-config-kzf",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=5.6.0"
+  },
+  "scripts": {
+    "eslint": "npx eslint .",
+    "eslint:print-config": "npx eslint --print-config ./index.js > ./demo/print-config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kezhongfa/eslint-config-kzf.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": {
+    "name": "kezhongfa",
+    "email": "kezhongfa@163.com"
+  },
+  "license": "ISC",
+  "bundleDependencies": false,
+  "bugs": {
+    "url": "https://github.com/kezhongfa/eslint-config-kzf/issues"
+  },
+  "homepage": "https://github.com/kezhongfa/eslint-config-kzf#readme",
+  "peerDependencies": {
+    "eslint": ">=6.8.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.7",
+    "eslint-plugin-vue": "^6.2.2",
+    "typescript": "^3.9.6",
+    "vue-eslint-parser": "^7.1.0"
+  }
+}
