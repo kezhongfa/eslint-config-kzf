@@ -1,12 +1,12 @@
-const shell = require("shelljs");
+const shell = require('shelljs');
 
 shell.rm('-rf', 'dist');
 
-shell.cp("-r","src", "dist");
+shell.cp('-r', 'src', 'dist');
 
-shell.cp("package.json", "dist");
+shell.cp('package.json', 'dist');
 
-shell.cp("README.md", "dist");
+shell.cp('README.md', 'dist');
 
 // shell.exec("npm config get registry", function (code, stdout) {
 //   if (!stdout.includes("registry.npmjs.org")) {
