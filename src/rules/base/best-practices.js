@@ -137,7 +137,7 @@ module.exports = {
 
     // 禁用魔术数字
     'no-magic-numbers': [
-      'true',
+      'error',
       {
         ignore: [],
         ignoreArrayIndexes: true,

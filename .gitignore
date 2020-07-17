@@ -5,7 +5,8 @@ node_modules
 
 ## test
 /demo
-**/*/demo
+/**/*/demo
+/**/print-config.json
 
 # Log files
 npm-debug.log*

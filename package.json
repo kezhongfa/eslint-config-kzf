@@ -13,7 +13,7 @@
     "npm:minor": "npm version minor",
     "npm:patch": "npm version patch",
     "postversion": "npm run publish && git push --follow-tags",
-    "eslint:print-config": "npx eslint --print-config src/index.js > demo/print-config.json"
+    "eslint:print-config": "npx eslint --print-config src/index.js > print-config.json"
   },
   "repository": {
     "type": "git",
