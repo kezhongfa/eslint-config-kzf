@@ -19,8 +19,8 @@ module.exports = {
     ],
 
     // 设置圈复杂度最大值
-    // @off 在编码过程中会引起大片段报错，让人想关掉它们。这类问题比较适合做后置检查
-    complexity: ['off', 10],
+    // @off 在编码过程中可能会引起大片段报错，关掉先。
+    complexity: 'off',
 
     // 要求 return 语句要么总是指定返回的值，要么不指定
     'consistent-return': 'off',
@@ -36,7 +36,8 @@ module.exports = {
     'dot-location': ['error', 'property'],
 
     // 优先使用 . 访问对象的属性
-    'dot-notation': ['error', { allowKeywords: true }],
+    // 为了兼容 ECMAScript 3，设置 allowKeywords 为 false（默认为true），避免对是保留字的属性使用点号
+    'dot-notation': ['error', { allowKeywords: false }],
 
     // 使用严格相等运算符
     eqeqeq: ['warn', 'always', { null: 'ignore' }],
@@ -44,7 +45,7 @@ module.exports = {
     // for-in 循环中需要对 key 进行验证
     'guard-for-in': 'warn',
 
-    // enforce a maximum number of classes per file
+    // 强制每个文件中包含的的类的最大数量
     'max-classes-per-file': 'off',
 
     // 禁止使用 alert
@@ -78,8 +79,8 @@ module.exports = {
     'no-eq-null': 'off',
 
     // 禁止使用 eval
-    // @unessential 有些业务必须使用 eval，不做强制卡点
-    'no-eval': 'error',
+    // @unessential 可能使用 eval，关闭先
+    'no-eval': 'off',
 
     // 禁止扩展原生对象
     'no-extend-native': 'error',
@@ -101,30 +102,31 @@ module.exports = {
 
     // 禁止使用较短的符号实现类型转换
     'no-implicit-coercion': [
-      'off',
+      'error',
       {
         boolean: false,
         number: true,
-        string: true,
+        string: false,
         allow: [],
       },
     ],
 
     // 禁止在全局范围使用变量和函数声明
+    // 该规则禁止在顶级作用域下使用 var 和命名的 function 声明。该规则不适用于 ES 和 CommonJS 的模块，因为它们有自己的模块作用域
     // @off 这条本身在 "parserOptions": { "sourceType": "module" } 下不起作用
     'no-implicit-globals': 'off',
 
     // 禁止使用类 eval 的方法，如 setTimeout 传入字符串
-    // @unessential 同 eval，有些业务就是要用，不做强制卡点
+    // @unessential 同 eval，也可能要用，关闭先
     'no-implied-eval': 'error',
 
-    // 禁止在 class 外使用 this
+    // 禁止 this 关键字在类或类对象之外出现
     'no-invalid-this': 'off',
 
     // 禁止使用 __iterator__ 属性
     'no-iterator': 'error',
 
-    // 不要使用 label
+    // 禁用标签语句
     'no-labels': ['warn', { allowLoop: false, allowSwitch: false }],
 
     // 禁止使用不必要的代码块
@@ -135,7 +137,7 @@ module.exports = {
 
     // 禁用魔术数字
     'no-magic-numbers': [
-      'off',
+      'true',
       {
         ignore: [],
         ignoreArrayIndexes: true,
@@ -145,7 +147,6 @@ module.exports = {
     ],
 
     // 禁止出现多个连续空格
-    // @unessential
     'no-multi-spaces': [
       'error',
       {
@@ -205,8 +206,8 @@ module.exports = {
     'no-return-await': 'error',
 
     // 禁止使用 javascript:url，如 location.href = 'javascript:void(0)';
-    // @unessential 同 eval，有些业务就是要用，不做强制卡点
-    'no-script-url': 'error',
+    // @unessential 同 eval，有些业务就是要用
+    'no-script-url': 'off',
 
     // 禁止自我赋值
     'no-self-assign': 'error',

@@ -4,25 +4,12 @@ module.exports = {
   },
 
   rules: {
+
     // 箭头函数-函数体风格
-    // @off 允许灵活使用
-    'arrow-body-style': [
-      'off',
-      'as-needed',
-      {
-        requireReturnForObjectLiteral: false,
-      },
-    ],
+    'arrow-body-style': 'off',
 
     // 箭头函数-函数参数风格
-    // @off 允许灵活使用
-    'arrow-parens': [
-      'off',
-      'as-needed',
-      {
-        requireForBlockBody: true,
-      },
-    ],
+    'arrow-parens':'off',
 
     // 箭头函数的箭头前后各留一个空格
     // @unessential
@@ -56,13 +43,7 @@ module.exports = {
     'no-new-symbol': 'error',
 
     // 禁止特定的 import
-    'no-restricted-imports': [
-      'off',
-      {
-        paths: [],
-        patterns: [],
-      },
-    ],
+    'no-restricted-imports':'off',
 
     // 在 constructor 中，禁止在调用 super() 前使用 this 或 super 关键字
     'no-this-before-super': 'error',
@@ -155,14 +136,7 @@ module.exports = {
     'rest-spread-spacing': ['error', 'never'],
 
     // 为 import 排序
-    'sort-imports': [
-      'off',
-      {
-        ignoreCase: false,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-      },
-    ],
+    'sort-imports': 'off',
 
     // 创建 Symbol 时必须传入参数
     'symbol-description': 'warn',

@@ -18,7 +18,7 @@ module.exports = {
     // 不要在条件表达式中使用赋值语句
     'no-cond-assign': ['error', 'always'],
 
-    // 生产环境禁止使用 console
+    // 生产环境禁止使用 console
     'no-console': 'warn',
 
     // 不要在条件表达式中使用常量
@@ -48,21 +48,11 @@ module.exports = {
     // 禁止对 catch 的入参重新赋值
     'no-ex-assign': 'error',
 
-    // 避免不必要的布尔类型转换
+    // 避免不必要的布尔转换
     'no-extra-boolean-cast': 'error',
 
     // 禁止不必要的小括号
-    'no-extra-parens': [
-      'off',
-      'all',
-      {
-        conditionalAssign: true,
-        nestedBinaryExpressions: false,
-        returnAssign: false,
-        ignoreJSX: 'all', // delegate to eslint-plugin-react
-        enforceForArrowConditionals: false,
-      },
-    ],
+    'no-extra-parens': 'off',
 
     // 禁止不必要的分号
     'no-extra-semi': 'error',
@@ -95,14 +85,14 @@ module.exports = {
     // 禁用稀疏数组，如 var items = [,,];
     'no-sparse-arrays': 'error',
 
-    // 不要在普通字符串中出现模板字符串占位语法，如 "Hello ${name}!"，旨在防错写。
+    // 禁止在常规字符串中出现模板字面量占位符语法，如 "Hello ${name}!"，旨在防错写。
     // 但不排除有时普通字符串内容就是这样，因此这条开为 warn 级别
     'no-template-curly-in-string': 'warn',
 
     // 避免令人困惑的多行表达式，多是由不加分号导致
     'no-unexpected-multiline': 'error',
 
-    // 不要在 return 等语句之后出现不可达的代码
+    // 不要在 return、throw、continue 和 break语句之后出现不可达的代码
     'no-unreachable': 'error',
 
     // 禁止在 finally 中出现控制流语句，如 return, throw, break 或 continue
@@ -117,10 +107,7 @@ module.exports = {
     // 使用 Number.isNaN()，而不是直接与 NaN 进行比较
     'use-isnan': 'error',
 
-    // 使用有效的 JSDoc 注释
-    'valid-jsdoc': 'off',
-
-    // 同 typeof 表达式结果进行比较的值必须是有效的字符串，即 'undefined', 'object', 'boolean', 'number', 'string', 'function' 或 'symbol'
+    // 强制 typeof 表达式与有效的字符串进行比较，即 'undefined', 'object', 'boolean', 'number', 'string', 'function' 或 'symbol'
     'valid-typeof': ['error', { requireStringLiterals: true }],
   },
 };

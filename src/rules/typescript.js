@@ -1,7 +1,6 @@
 /**
  * 本文件使用 @typescript-eslint/parser，规则由 @typescript-eslint/eslint-plugin 插件提供
  * 规则文档见：https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
- * 有一些原生规则需用 ts 插件的规则替换，见 https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.json
  */
 
 module.exports = {
@@ -16,7 +15,6 @@ module.exports = {
         SwitchCase: 1,
         VariableDeclarator: 1,
         outerIIFEBody: 1,
-        // MemberExpression: null,
         FunctionDeclaration: {
           parameters: 1,
           body: 1,
@@ -64,19 +62,13 @@ module.exports = {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
     '@typescript-eslint/array-type': ['warn', { default: 'array-simple' }],
     '@typescript-eslint/ban-types': 'error',
-    // camelcase: 'off',
-    // '@typescript-eslint/camelcase': 'error',
-    // 'func-call-spacing': 'off',
-    // '@typescript-eslint/func-call-spacing': 'error',
     '@typescript-eslint/member-ordering': ['warn'],
     '@typescript-eslint/no-empty-interface': 'error',
-    // 'no-extra-parens': 'off',
-    // '@typescript-eslint/no-extra-parens': 'error',
     '@typescript-eslint/no-inferrable-types': 'warn',
     '@typescript-eslint/no-parameter-properties': 'error',
     '@typescript-eslint/no-require-imports': 'warn',
     '@typescript-eslint/no-var-requires': 'warn',
-    semi: 'off',
+     semi: 'off',
     '@typescript-eslint/semi': ['error', 'always'],
     '@typescript-eslint/unified-signatures': 'warn',
   },

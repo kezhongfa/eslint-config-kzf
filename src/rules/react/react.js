@@ -11,7 +11,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
 
     // 防止 React 组件定义中缺少 displayName
-    'react/display-name': ['off', { ignoreTranspilerName: false }],
+    'react/display-name': 'off',
 
     // 不要使用模糊的类型检查器 (any, array, object)
     'react/forbid-prop-types': ['warn', { forbid: ['any', 'array', 'object'] }],
@@ -32,13 +32,7 @@ module.exports = {
     'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
 
     // JSX 中命名事件处理函数的前缀约定
-    'react/jsx-handler-names': [
-      'off',
-      {
-        eventHandlerPrefix: 'handle',
-        eventHandlerPropPrefix: 'on',
-      },
-    ],
+    'react/jsx-handler-names':'off',
 
     // JSX 语法使用 2 个空格缩进
     // @unessential
@@ -65,7 +59,7 @@ module.exports = {
     'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
 
     // JSX 中不要直接使用字符串，而是通过{'TEXT'}
-    'react/jsx-no-literals': ['off', { noStrings: true }],
+    'react/jsx-no-literals': 'off',
 
     // 不要使用未声明的组件
     'react/jsx-no-undef': 'error',
@@ -80,30 +74,13 @@ module.exports = {
     ],
 
     // 类型检查器的属性名按首字母排序
-    'react/sort-prop-types': [
-      'off',
-      {
-        ignoreCase: true,
-        callbacksLast: false,
-        requiredFirst: false,
-      },
-    ],
+    'react/sort-prop-types':'off',
 
     // 本条废弃，用新规则代替 react/jsx-sort-props
     'react/jsx-sort-prop-types': 'off',
 
     // 属性按首字母排序
-    'react/jsx-sort-props': [
-      'off',
-      {
-        ignoreCase: true,
-        callbacksLast: false,
-        shorthandFirst: false,
-        shorthandLast: false,
-        noSortAlphabetically: false,
-        reservedFirst: true,
-      },
-    ],
+    'react/jsx-sort-props':'off',
 
     // 本条是对JS规约 no-unused-vars 的补充，防止React被错误地标记为未使用
     'react/jsx-uses-react': ['error'],
@@ -174,47 +151,7 @@ module.exports = {
     'react/self-closing-comp': 'error',
 
     // 组件方法排序
-    'react/sort-comp': [
-      'off',
-      {
-        order: [
-          'static-methods',
-          'instance-variables',
-          'lifecycle',
-          '/^on.+$/',
-          'getters',
-          'setters',
-          '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
-          'instance-methods',
-          'everything-else',
-          'rendering',
-        ],
-        groups: {
-          lifecycle: [
-            'displayName',
-            'propTypes',
-            'contextTypes',
-            'childContextTypes',
-            'mixins',
-            'statics',
-            'defaultProps',
-            'constructor',
-            'getDefaultProps',
-            'getInitialState',
-            'state',
-            'getChildContext',
-            'componentWillMount',
-            'componentDidMount',
-            'componentWillReceiveProps',
-            'shouldComponentUpdate',
-            'componentWillUpdate',
-            'componentDidUpdate',
-            'componentWillUnmount',
-          ],
-          rendering: ['/^render.+$/', 'render'],
-        },
-      },
-    ],
+    'react/sort-comp':'off',
 
     // 多行的 JSX 标签需用小括号包裹
     // @unessential
@@ -253,17 +190,17 @@ module.exports = {
     'react/no-render-return-value': 'error',
 
     // 组件必须包含 shouldComponentUpdate 或者 PureRenderMixin
-    'react/require-optimization': ['off', { allowDecorators: [] }],
+    'react/require-optimization': 'off',
 
     // 不要使用 findDOMNode，严格模式下已经弃用
     // @unessential
     'react/no-find-dom-node': 'error',
 
     // 禁止某些特定的 prop 命名，只对组件生效，DOM节点不生效
-    'react/forbid-component-props': ['off', { forbid: [] }],
+    'react/forbid-component-props': 'off',
 
     // 禁止某些特定的元素命名
-    'react/forbid-elements': ['off', { forbid: [] }],
+    'react/forbid-elements': 'off',
 
     // 禁止在有子节点的组件或 DOM 元素中使用 dangerouslySetInnerHTML 属性
     'react/no-danger-with-children': 'error',
@@ -298,7 +235,7 @@ module.exports = {
     ],
 
     // 该条废弃，被替代为 jsx-tag-spacing
-    'react/jsx-space-before-closing': ['off', 'always'],
+    'react/jsx-space-before-closing': 'off',
 
     // 不要用数组索引作为 map 元素的 key
     'react/no-array-index-key': 'warn',

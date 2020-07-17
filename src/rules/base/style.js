@@ -74,7 +74,7 @@ module.exports = {
     'implicit-arrow-linebreak': ['error', 'beside'],
 
     // 使用 2 个空格缩进
-    // @unessential 风格问题，争议很大
+    // @unessential
     indent: [
       'error',
       2,
@@ -82,7 +82,6 @@ module.exports = {
         SwitchCase: 1,
         VariableDeclarator: 1,
         outerIIFEBody: 1,
-        // MemberExpression: null,
         FunctionDeclaration: {
           parameters: 1,
           body: 1,
@@ -121,7 +120,7 @@ module.exports = {
 
     // JSX 属性使用双引号，不要使用单引号
     // @off 本条在 react.js 中开启
-    'jsx-quotes': ['off', 'prefer-double'],
+    'jsx-quotes': 'off',
 
     // 定义对象字面量时，key, value 之间有且只有一个空格
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
@@ -141,14 +140,7 @@ module.exports = {
     ],
 
     // 单行注释应单独一行写在被注释对象的上方，不要追加在某条语句的后面
-    'line-comment-position': [
-      'off',
-      {
-        position: 'above',
-        ignorePattern: '',
-        applyDefaultPatterns: true,
-      },
-    ],
+    'line-comment-position': 'off',
 
     // 指定 unix 或 windows 风格的换行符
     'linebreak-style': 'off',
@@ -159,14 +151,13 @@ module.exports = {
     // 要求在注释周围有空行
     'lines-around-comment': 'off',
 
-    // 控制语句的嵌套层级不要过深，不要超过 4 级
-    // @off 适合做后置检查
-    'max-depth': ['off', 4],
+    // 控制语句的嵌套层级不要过深
+    'max-depth': 'off',
 
-    // 单行最大字符数：100
+    // 单行最大字符数：120
     'max-len': [
       'warn',
-      100,
+      120,
       2,
       {
         ignoreUrls: true,
@@ -178,9 +169,8 @@ module.exports = {
     ],
 
     // 文件最大行数：1000
-    // @off 适合做后置检查
     'max-lines': [
-      'off',
+      'warn',
       {
         max: 1000,
         skipBlankLines: true,
@@ -189,9 +179,8 @@ module.exports = {
     ],
 
     // 函数最大行数：80
-    // @off 适合做后置检查
     'max-lines-per-function': [
-      'off',
+      'warn',
       {
         max: 80,
         skipBlankLines: true,
@@ -204,19 +193,19 @@ module.exports = {
     'max-nested-callbacks': 'off',
 
     // 函数参数数量上限
-    'max-params': ['off', 3],
+    'max-params': 'off',
 
     // 函数块最多允许的的语句数量
-    'max-statements': ['off', 10],
+    'max-statements': 'off',
 
     // 每一行中所允许的最大语句数量
-    'max-statements-per-line': ['off', { max: 1 }],
+    'max-statements-per-line': 'off',
 
     // 多行注释的风格
-    'multiline-comment-style': ['off', 'starred-block'],
+    'multiline-comment-style': 'off',
 
     // 要求或禁止在三元操作数中间换行
-    'multiline-ternary': ['off', 'never'],
+    'multiline-ternary': 'off',
 
     // 使用大驼峰风格命名类和构造函数
     'new-cap': [
@@ -277,7 +266,7 @@ module.exports = {
     'no-mixed-spaces-and-tabs': 'error',
 
     // 禁止连续赋值
-    'no-multi-assign': ['error'],
+    'no-multi-assign': 'error',
 
     // 禁止出现多个（大于 2 个）连续空行
     'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
@@ -350,7 +339,7 @@ module.exports = {
     // 强制操作符使用一致的换行符
     'operator-linebreak': 'off',
 
-    // 块的开始和结束不能是空行
+    // 块的开始和结束不能是空行
     'padded-blocks': ['warn', { blocks: 'never', classes: 'never', switches: 'never' }],
 
     // 要求或禁止在语句间填充空行
@@ -365,11 +354,8 @@ module.exports = {
     // 字符串优先使用单引号
     quotes: ['error', 'single', { avoidEscape: true }],
 
-    // 使用 JSDoc 注释
-    'require-jsdoc': 'off',
-
     // 使用分号
-    // @unessential 风格问题，争议很大
+    // @unessential 风格问题
     semi: ['error', 'always'],
 
     // 分号的前面无空格，后面有空格
@@ -438,7 +424,7 @@ module.exports = {
     'template-tag-spacing': ['error', 'never'],
 
     // 要求或禁止 Unicode 字节顺序标记 (BOM)
-    'unicode-bom': ['off', 'never'],
+    'unicode-bom': 'off',
 
     // 要求正则表达式被括号括起来
     'wrap-regex': 'off',

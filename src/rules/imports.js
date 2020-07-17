@@ -81,10 +81,7 @@ module.exports = {
     'import/extensions': 'off',
 
     // import 语句的排序
-    'import/order': ['off', {
-      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-      'newlines-between': 'never',
-    }],
+    'import/order': 'off',
 
     // 在最后一个 import / require 语句后保留一个空行
     'import/newline-after-import': 'warn',
@@ -96,7 +93,7 @@ module.exports = {
     'import/no-restricted-paths': 'off',
 
     // Forbid modules to have too many dependencies
-    'import/max-dependencies': ['off', { max: 10 }],
+    'import/max-dependencies': 'off',
 
     // Forbid import of modules using absolute paths
     'import/no-absolute-path': 'off',
@@ -105,9 +102,7 @@ module.exports = {
     'import/no-dynamic-require': 'off',
 
     // prevent importing the submodules of other modules
-    'import/no-internal-modules': ['off', {
-      allow: [],
-    }],
+    'import/no-internal-modules': 'off',
 
     // Warn if a module could be mistakenly parsed as a script by a consumer
     // leveraging Unambiguous JavaScript Grammar
@@ -127,14 +122,7 @@ module.exports = {
     'import/no-named-default': 'off',
 
     // Reports if a module's default export is unnamed
-    'import/no-anonymous-default-export': ['off', {
-      allowArray: false,
-      allowArrowFunction: false,
-      allowAnonymousClass: false,
-      allowAnonymousFunction: false,
-      allowLiteral: false,
-      allowObject: false,
-    }],
+    'import/no-anonymous-default-export': 'off',
 
     // This rule enforces that all exports are declared at the bottom of the file.
     'import/exports-last': 'off',
@@ -157,10 +145,7 @@ module.exports = {
     'import/no-useless-path-segments': 'off',
 
     // dynamic imports require a leading comment with a webpackChunkName
-    'import/dynamic-import-chunkname': ['off', {
-      importFunctions: [],
-      webpackChunknameFormat: '[0-9a-zA-Z-_/.]+',
-    }],
+    'import/dynamic-import-chunkname':'off',
 
     // Use this rule to prevent imports to folders in relative parent paths.
     'import/no-relative-parent-imports': 'off',

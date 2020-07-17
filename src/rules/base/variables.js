@@ -24,8 +24,8 @@ module.exports = {
     'no-restricted-globals': 'off',
 
     // 禁止变量与外层作用域已存在的变量同名
-    // @unessential 不做强制卡点
-    'no-shadow': 'error',
+    // @unessential
+    'no-shadow': 'off',
 
     // 禁止使用保留字命名变量
     'no-shadow-restricted-names': 'error',

@@ -18,7 +18,7 @@ module.exports = {
     'no-buffer-constructor': 'off',
 
     // 禁止混合常规变量声明和 require 调用
-    'no-mixed-requires': ['off', false],
+    'no-mixed-requires': 'off',
 
     // 禁止调用 require 时使用 new 操作符
     'no-new-require': 'off',
