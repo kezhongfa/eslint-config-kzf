@@ -18,3 +18,10 @@ cache:
 #     on:
 #       tags: true
 #     tag: latest
+
+notifications:
+  email:
+    recipients:
+      - kezhongfa@163.com
+    on_success: never # default: change
+    on_failure: always # default: always
