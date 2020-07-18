@@ -8,11 +8,11 @@
     "npm": ">=5.6.0"
   },
   "scripts": {
-    "publish": "node scripts/publish.js",
+    "publish": "node scripts/publish.js --version \"0.0.5-alpha.3 -m \"version %s\"\" --tag alpha",
     "npm:major": "npm version major",
     "npm:minor": "npm version minor",
     "npm:patch": "npm version patch",
-    "postversion": "npm run publish && git push --follow-tags",
+    "postversion": "git push --follow-tags",
     "eslint:print-config": "npx eslint --print-config src/index.js > print-config.json"
   },
   "repository": {
@@ -37,6 +37,7 @@
     "eslint": ">=7.4.0"
   },
   "devDependencies": {
+    "minimist": "^1.2.5",
     "shelljs": "^0.8.4",
     "typescript": "^3.9.6"
   },
