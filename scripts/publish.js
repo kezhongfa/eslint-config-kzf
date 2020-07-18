@@ -8,6 +8,8 @@ const { version, tag = 'latest' } = argv;
 console.log('tag:', version, tag);
 
 if (version) {
+  shell.exec(`npm version ${version}`);
+
   shell.rm('-rf', 'dist');
 
   shell.cp('-r', 'src', 'dist');
@@ -21,8 +23,6 @@ if (version) {
       shell.exec('npm config set registry=https://registry.npmjs.org');
     }
   });
-
-  shell.exec(`npm version ${version}`);
 
   shell.exec(`npm publish --access=public dist --tag ${tag}`);
 
