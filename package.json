@@ -8,6 +8,7 @@
     "npm": ">=5.6.0"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "eslint:print-config": "npx eslint --print-config src/index.js > print-config.json"
   },
   "repository": {
