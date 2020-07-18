@@ -22,6 +22,6 @@ cache:
 notifications:
   email:
     recipients:
-      - kezhongfa@163.com
+      - 1170212530@qq.com
     on_success: never # default: change
     on_failure: always # default: always
