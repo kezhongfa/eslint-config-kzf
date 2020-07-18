@@ -8,7 +8,7 @@
     "npm": ">=5.6.0"
   },
   "scripts": {
-    "publish": "node scripts/publish.js --version \"0.0.5-alpha.3 -m \"version %s\"\" --tag alpha",
+    "publish": "node scripts/publish.js --version 0.0.5-alpha.4 --tag alpha",
     "npm:major": "npm version major",
     "npm:minor": "npm version minor",
     "npm:patch": "npm version patch",

@@ -5,10 +5,8 @@ const argv = require('./argv');
 
 const { version, tag = 'latest' } = argv;
 
-console.log('tag:', version, tag);
-
 if (version) {
-  shell.exec(`npm version ${version}`);
+  shell.exec(`npm version ${version} -m "chore: version %s"`);
 
   shell.rm('-rf', 'dist');
 
