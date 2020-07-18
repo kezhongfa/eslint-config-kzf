@@ -16,6 +16,7 @@ if (version) {
     }
     shell.exec(`npm publish --access=public dist --tag ${tag}`);
     shell.exec('curl -X PUT https://npm.taobao.org/sync/eslint-config-kzf');
+    shell.exec("git push --follow-tags");
   });
 } else {
   console.error(colors.red('你未指定version 参数'));
