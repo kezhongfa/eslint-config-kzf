@@ -14,6 +14,6 @@ shell.exec('npm config get registry', (_, stdout) => {
   }
 });
 
-shell.exec('npm publish --access=public dist');
+shell.exec('npm publish --access=public dist -tag alpha');
 
 shell.exec('curl -X PUT https://npm.taobao.org/sync/eslint-config-kzf');
