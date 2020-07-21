@@ -1,4 +1,4 @@
-# 麒麟业务组件「kzf-business-components」
+# kzf-business-components
 
 ## 简介
 
