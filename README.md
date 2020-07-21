@@ -27,8 +27,14 @@ npm install eslint-config-kzf -D
 ```
 ### 使用
 
-```json
+将下面的代码保存至项目根目录，文件名为.eslintrc.json
+
+```shell
 {
-  "extends": "eslint-config-kzf"
+  "extends": ["eslint-config-kzf"],
+  "rules": {
+    # put your custom rules here
+  }
+  # put your other custom config below
 }
 ```
