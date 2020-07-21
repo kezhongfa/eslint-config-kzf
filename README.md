@@ -1,8 +1,8 @@
-# kzf-business-components
+# eslint-config-kzf
 
 ## 简介
 
-kzf-business-components [ESLint 配置集](http://eslint.org/docs/developer-guide/shareable-configs.html)，支持 JavaScript、TypeScript、React、Vue 等多种项目类型。
+eslint-config-kzf [ESLint 配置集](http://eslint.org/docs/developer-guide/shareable-configs.html)，支持 JavaScript、TypeScript、React、Vue 等多种项目类型。
 
 ### JavaScript 项目
 
