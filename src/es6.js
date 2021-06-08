@@ -8,6 +8,7 @@ module.exports = {
     './rules/base/es6',
     './rules/base/strict',
     './rules/imports',
+    './prettier.js',
   ].map(require.resolve),
   parser: 'babel-eslint',
   parserOptions: {

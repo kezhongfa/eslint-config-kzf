@@ -1,4 +1,3 @@
-
 module.exports = {
   extends: [
     './rules/base/best-practices',
@@ -7,5 +6,6 @@ module.exports = {
     './rules/base/style',
     './rules/base/variables',
     './rules/es5',
+    './prettier.js',
   ].map(require.resolve),
 };
