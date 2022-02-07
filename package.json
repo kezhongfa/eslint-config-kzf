@@ -22,6 +22,10 @@
     "name": "kezhongfa",
     "email": "kezhongfa@163.com"
   },
+  "publishConfig": {
+    "registry": "http://81.68.72.219:3001/",
+    "access": "public"
+  },
   "license": "ISC",
   "bundleDependencies": false,
   "bugs": {
